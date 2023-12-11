@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--<script> window.location.href="index.php"; </script>
+	<meta http-equiv="refresh" content="0; URL=index.php">-->
+	<title>Face login Trestics.</title>
+        <style>
+	        body {
+		   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+                   min-height: 100vh;
+            	   margin: 0;
+            	   background-color: #f0f0f0; /* Cambia el color de fondo si lo deseas */
+         	   color: #0182C9; /* Cambia el color del texto aquí */
+       		 }
+		 button {
+            		margin: 10px; /* Ajusta el margen entre los botones según tus necesidades */
+       		 }	
+    	</style>	
+</head>
+<body>
+    <h1>Register of Face Trestics.</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <br>
+    <video id="video" width="560" height="400" autoplay></video>
+    <br>
+    <button onclick="capture()">Take picture.</button>
+    <br>
+    <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+    <br>
+    <button onclick="register()">Sing in.</button>
+    <button onclick="login()">Login.</button>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
